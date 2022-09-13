@@ -30,11 +30,29 @@ function App() {
   ];
 
   const [currentProblemId, setCurrentProblemId] = useState(0);
+
   const currentProblem = problems[currentProblemId];
 
   const [result, setResult] = useState("");
 
   const [showExplanation, setShowExplanation] = useState(false);
+
+
+	const onClickChoice = (event) => {
+		const choice = event.target.textContent;
+		console.log(`click ${choice}`);
+
+		const isCorrect = choice === currentProblem.answer
+		console.log(`isCorrect: ${isCorrect}`)
+
+		if (isCorrect) {
+			setResult("正解");
+		} else {
+			setResult("不正解")
+		}
+
+		setShowExplanation(true);
+	}
 
   const onClickClose = () => {
 		console.log(`click close`);
@@ -55,8 +73,7 @@ function App() {
     <div className="App">
       <Problem  
         problem={currentProblem}
-        setResult={setResult}
-        setShowExplanation={setShowExplanation}
+        onClickChoice={onClickChoice}
       />
       <ExplanationModal 
         problem={currentProblem}

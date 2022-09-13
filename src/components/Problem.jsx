@@ -40,26 +40,9 @@ const problemContentStyle = {
 };
 
 export const Problem = (props) => {
-	const { problem, setResult, setShowExplanation } = props
+	const { problem, onClickChoice } = props
 
 	const [isAnswered, setIsAnswered] = useState(false);
-
-	const onClickChoice = (event) => {
-		const choice = event.target.textContent;
-		console.log(`click ${choice}`);
-
-		const isCorrect = choice === problem.answer
-		console.log(`isCorrect: ${isCorrect}`)
-
-		if (isCorrect) {
-			setResult("正解");
-		} else {
-			setResult("不正解")
-		}
-
-		// setIsAnswered(true);
-		setShowExplanation(true);
-	}
 
 	return (
 		<>

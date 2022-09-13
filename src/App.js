@@ -1,6 +1,6 @@
 import { useState } from 'react'; 
 import { Problem } from './components/Problem';
-import { Explanation } from './components/Explanation';
+import { ExplanationModal } from './components/ExplanationModal';
 import './App.css';
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
         setResult={setResult}
         setShowExplanation={setShowExplanation}
       />
-      <Explanation 
+      <ExplanationModal 
         problem={currentProblem}
 				result={result} 
 				showFlag={showExplanation}

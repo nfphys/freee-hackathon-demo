@@ -64,7 +64,7 @@ const explanationContentStyle = {
 }
 
 export const Explanation = (props) => {
-  const { result, text, showFlag, onClickClose, onClickNextProblem } = props;
+  const { problem, result, showFlag, onClickClose, onClickNextProblem } = props;
 
   return (
     <>
@@ -86,7 +86,7 @@ export const Explanation = (props) => {
             <div className="explanationBody" style={explanationBodyStyle}>
               <h3>解説</h3>
               <p className="explanationContent" style={explanationContentStyle}>
-								{text}
+								{problem.explanation}
 							</p>
             </div>
           </div>

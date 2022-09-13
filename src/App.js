@@ -1,7 +1,7 @@
 import { useState } from 'react'; 
 import { Problem } from './components/Problem';
+import { Explanation } from './components/Explanation';
 import './App.css';
-
 
 function App() {
   const problems = [
@@ -30,10 +30,18 @@ function App() {
   ];
 
   const [currentProblemId, setCurrentProblemId] = useState(0);
+  const currentProblem = problems[currentProblemId];
 
   const [result, setResult] = useState("");
 
   const [showExplanation, setShowExplanation] = useState(false);
+
+  const onClickClose = () => {
+		console.log(`click close`);
+		
+		setResult('');
+		setShowExplanation(false);
+	};
 
   const onClickNextProblem = () => {
     console.log("click next problem");
@@ -46,13 +54,17 @@ function App() {
   return (
     <div className="App">
       <Problem  
-        problem={problems[currentProblemId]}
-        onClickNextProblem={onClickNextProblem}
-        result={result}
+        problem={currentProblem}
         setResult={setResult}
-        showExplanation={showExplanation}
         setShowExplanation={setShowExplanation}
       />
+      <Explanation 
+        problem={currentProblem}
+				result={result} 
+				showFlag={showExplanation}
+				onClickClose={onClickClose}
+				onClickNextProblem={onClickNextProblem}
+			/>
     </div>
   );
 }

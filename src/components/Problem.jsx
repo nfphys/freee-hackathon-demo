@@ -1,6 +1,5 @@
 import { useState } from 'react'; 
 import { ChoiceButton } from './ChoiceButton';
-import { Explanation } from './Explanation';
 
 const problemStyle = {
 	margin: "auto",
@@ -41,7 +40,7 @@ const problemContentStyle = {
 };
 
 export const Problem = (props) => {
-	const { problem, onClickNextProblem, result, setResult, showExplanation, setShowExplanation } = props
+	const { problem, setResult, setShowExplanation } = props
 
 	const [isAnswered, setIsAnswered] = useState(false);
 
@@ -61,13 +60,6 @@ export const Problem = (props) => {
 		// setIsAnswered(true);
 		setShowExplanation(true);
 	}
-
-	const onClickClose = () => {
-		console.log(`click close`);
-		
-		setResult('');
-		setShowExplanation(false);
-	};
 
 	return (
 		<>
@@ -89,13 +81,6 @@ export const Problem = (props) => {
 					<ChoiceButton value="x" onClick={onClickChoice} disabled={isAnswered} />
 				</div>
 			</div>
-			<Explanation 
-				result={result} 
-				text={problem.explanation} 
-				showFlag={showExplanation}
-				onClickClose={onClickClose}
-				onClickNextProblem={onClickNextProblem}
-			/>
 		</>
 	);
 };

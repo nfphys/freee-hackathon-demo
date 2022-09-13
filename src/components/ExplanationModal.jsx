@@ -63,7 +63,7 @@ const explanationContentStyle = {
 	fontWeight: "600",
 }
 
-export const Explanation = (props) => {
+export const ExplanationModal = (props) => {
   const { problem, result, showFlag, onClickClose, onClickNextProblem } = props;
 
   return (

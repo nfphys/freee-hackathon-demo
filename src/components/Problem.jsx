@@ -1,4 +1,3 @@
-import { useState } from 'react'; 
 import { ChoiceButton } from './ChoiceButton';
 
 const problemStyle = {
@@ -42,8 +41,6 @@ const problemContentStyle = {
 export const Problem = (props) => {
 	const { problem, onClickChoice } = props
 
-	const [isAnswered, setIsAnswered] = useState(false);
-
 	return (
 		<>
 			<div className="problem" style={problemStyle}>
@@ -60,8 +57,8 @@ export const Problem = (props) => {
 						Level {problem.level}
 					</p>
 					<p className="problemContent" style={problemContentStyle}>{problem.text}</p>
-					<ChoiceButton value="o" onClick={onClickChoice} disabled={isAnswered} /> 
-					<ChoiceButton value="x" onClick={onClickChoice} disabled={isAnswered} />
+					<ChoiceButton value="o" onClick={onClickChoice} /> 
+					<ChoiceButton value="x" onClick={onClickChoice} />
 				</div>
 			</div>
 		</>

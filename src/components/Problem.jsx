@@ -39,7 +39,7 @@ export const Problem = (props) => {
 					<h1>デイリークイズ</h1>
 				</div>
 				<div className="problem-main">
-					<p className="problem-level">レベル{problem.level}</p>
+					<p className="problem-level">Level {problem.level}</p>
 					<p>{problem.text}</p>
 					<ChoiceButton value="o" onClick={onClickChoice} disabled={isAnswered} /> 
 					<ChoiceButton value="x" onClick={onClickChoice} disabled={isAnswered} />

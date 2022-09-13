@@ -34,13 +34,13 @@ export const Problem = (props) => {
 	return (
 		<>
 			<div className="problem">
-				<div className="problem-header">
-					<h2>〜freeeと一緒に学ぼう〜</h2>
-					<h1>デイリークイズ</h1>
+				<div className="problemHeader">
+					<h2 className="dailyQuizTheme">〜freeeと一緒に学ぼう〜</h2>
+					<h1 className="dailyQuiz">デイリークイズ</h1>
 				</div>
-				<div className="problem-main">
-					<p className="problem-level">Level {problem.level}</p>
-					<p>{problem.text}</p>
+				<div className="problemBody">
+					<p className="problemLevel">Level {problem.level}</p>
+					<p className="problemContent">{problem.text}</p>
 					<ChoiceButton value="o" onClick={onClickChoice} disabled={isAnswered} /> 
 					<ChoiceButton value="x" onClick={onClickChoice} disabled={isAnswered} />
 				</div>

@@ -12,17 +12,17 @@
   border-radius: 5px;
 }
 
-.problem-header {
+.problemHeader {
   background-color: white;
   padding: 4px;
 }
 
-.problem-header h1 {
+.dailyQuiz {
   margin: 0;
   font-size: 18px;
 }
 
-.problem-header h2 {
+.dailyQuizTheme {
   margin: 0;
   font-size: 11px;
   color: #3264DC;
@@ -30,14 +30,14 @@
 
 /* problem-main */
 
-.problem-main {
+.problemBody {
   min-width: 400px;
   max-width: 800px;
   border: 1px;
   border-color: black;
 }
 
-.problem-level {
+.problemLevel {
   border: 2px solid #2864F0;
   border-radius: 10px;
   color: #2864F0;
@@ -46,22 +46,9 @@
   margin-top: 15px;
 }
 
-.problem-main p {
+.problemContent {
   font-size: 15px;
   font-weight: 600;
-}
-
-.problem-main button {
-  width: 133px;
-  height: 51px;
-  background-color: white;
-  color: #2864F0;
-  font-size: 33px;
-  border: 0;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-  margin: 10px;
-  cursor: pointer;
 }
 
 /* explanation */
@@ -110,9 +97,4 @@
   margin: 20px;
   font-weight: 600;
 }
-
-/* .explanation-main {
-  margin: 0;
-  background-color: lightgray;
-} */
 

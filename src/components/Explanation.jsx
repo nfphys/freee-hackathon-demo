@@ -18,6 +18,51 @@ const explanationContent = {
   width: "800px",
 }
 
+const closeButtonStyle = {
+	fontSize: "20px",
+	margin: "10px",
+	float: "left",
+	border: "0px",
+	backgroundColor: "white",
+	cursor: "pointer",
+}
+
+const nextProblemButtonStyle = {
+	fontSize: "20px",
+	margin: "10px",
+	float: "right",
+	backgroundColor: "white",
+	fontWeight: "600",
+	fontSize: "14px",
+	border: "1px solid #E9E7E7",
+	borderRadius: "6.4px",
+	cursor: "pointer",
+}
+
+const resultStyle = {
+	margin: "0",
+	clear: "both",
+}
+
+const resultSymbolStyle = {
+	color: "#2864F0", 
+	fontSize: "100px",
+	margin: "0",
+}
+
+const explanationBodyStyle = {
+	background: "lightgray",
+	margin: "0",
+	padding: "10px",
+	borderRadius: "0px 0px 10px 10px",
+}
+
+const explanationContentStyle = {
+	fontSize: "14px",
+	margin: "20px",
+	fontWeight: "600",
+}
+
 export const Explanation = (props) => {
   const { result, text, showFlag, onClickClose, onClickNextProblem } = props;
 
@@ -26,19 +71,23 @@ export const Explanation = (props) => {
       {showFlag ? (
         <div style={overlay}>
           <div className="explanation" style={explanationContent} >
-            <button className="closeButton" onClick={onClickClose}>
+            <button className="closeButton" onClick={onClickClose} style={closeButtonStyle}>
               X 
             </button>
-            <button className="nextProblemButton" onClick={onClickNextProblem}>
+            <button className="nextProblemButton" onClick={onClickNextProblem} style={nextProblemButtonStyle}>
               次のクイズへ
             </button>
-            <h2>{result}</h2>
-            <h1 className="ox">
+            <h2 className="result" style={resultStyle}>
+							{result}
+						</h2>
+            <h1 className="resultSymbol" style={resultSymbolStyle}>
               {result === "正解" ? "○" : "×" }
             </h1>
-            <div className="explanation-main">
+            <div className="explanationBody" style={explanationBodyStyle}>
               <h3>解説</h3>
-              <p>{text}</p>
+              <p className="explanationContent" style={explanationContentStyle}>
+								{text}
+							</p>
             </div>
           </div>
         </div>

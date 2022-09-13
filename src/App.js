@@ -5,8 +5,8 @@ function App() {
   const problems = [
     {
       level: 1,
-      text: "仕事できるスーツは経費にできるでしょうか？",
-      answer: "x",
+      text: "仕事で着るスーツは経費にできるでしょうか？",
+      answer: "o",
       explanation: `
         フリーランスの場合は経費で落とせます。
         ただし、仕事で使う割合に応じて経費にできる割合が決まります。

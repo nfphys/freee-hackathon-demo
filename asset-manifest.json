@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/freee-hackathon-demo/static/css/main.936632b7.css",
+    "main.js": "/freee-hackathon-demo/static/js/main.abf6310c.js",
+    "static/js/787.e577274b.chunk.js": "/freee-hackathon-demo/static/js/787.e577274b.chunk.js",
+    "index.html": "/freee-hackathon-demo/index.html",
+    "main.936632b7.css.map": "/freee-hackathon-demo/static/css/main.936632b7.css.map",
+    "main.abf6310c.js.map": "/freee-hackathon-demo/static/js/main.abf6310c.js.map",
+    "787.e577274b.chunk.js.map": "/freee-hackathon-demo/static/js/787.e577274b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.936632b7.css",
+    "static/js/main.abf6310c.js"
+  ]
+}

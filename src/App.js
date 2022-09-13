@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   const problems = [
     {
+      level: 1,
       text: "仕事できるスーツは経費にできるでしょうか？",
       answer: "x",
       explanation: `
@@ -15,11 +16,13 @@ function App() {
       `,
     },
     {
+      level: 2,
       text: "家族の夕飯の買い出しは経費にしてもいいでしょうか？",
       answer: "x",
       explanation: "作成中...",
     },
     {
+      level: 2,
       text: "クレジットカードの明細があればレシートは捨てても良い！",
       answer: "x",
       explanation: "作成中...",
